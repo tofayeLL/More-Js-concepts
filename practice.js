@@ -25,11 +25,12 @@ displayGreetings('Alice', 2000); */
 
 
 /* --------practice task 2-------- */
-function tellJoke(){
+// question: The function tellJoke() below logs a funny message every 2 seconds and after 10 seconds, it stops. Complete the code below and see the output.
+
+/* function tellJoke(){
     console.log("why dont scientist trust atom? because they make me up everything");
     
 }
-
    const jokeInterval = setInterval(()=>{
     tellJoke();
    
@@ -39,7 +40,30 @@ function tellJoke(){
 
    setTimeout(() => {
     clearInterval(jokeInterval);
-   }, 11000);
+   }, 11000); */
+
+
+
+   /* ----------------------------------------------------------- */
+
+
+   /* ------practice task 3----- */
+//    question: Write an async/await function that fetch data from an api and logs a message.
+
+const loadData = async()=>{
+    const res = await fetch('https://v2.jokeapi.dev/joke/Programming?type=single');
+    const data = await res.json();
+    console.log(data);
+    displayJokes(data.joke);  
+}
+
+const displayJokes = (data) =>{
+    const joke = document.getElementById('rendom-jokes');
+    joke.innerText = data;  
+}
+
+
+loadData();
 
 
     

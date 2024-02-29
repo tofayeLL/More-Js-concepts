@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>practice</title>
+    <!-- tailwind and daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-  
-    
+   
+    <main class="container mx-auto lg:px-24 px-4 my-20 ">
+       <div class="bg-slate-400 p-10  rounded-lg space-y-5">
+        <h1 class="text-3xl text-white font-bold">Read Random Jokes</h1>
+        <p class="text-green-100 font-bold text-lg">Everytime Refresh your browser then you can read new jokes</p>
+        <p id="rendom-jokes" class=" text-lg bg-white rounded-lg p-7"></p>
+       </div>
+
+    </main>
+   
+
+
+
+
+
     <script src="practice.js"></script>
 </body>
+
 </html>
